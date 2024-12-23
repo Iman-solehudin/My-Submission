@@ -83,7 +83,7 @@ with col2:
     st.write(season_df["cnt"].sum())
 
 fig, ax = plt.subplots(figsize=(16, 8))
-colors = ['skyblue' if season !='Fall' else 'red' for season in season_df['season']]
+ax.bar(season_df["season"], season_df["cnt"], color='skyblue')
 ax.set_title('Number of Sharing Bike by Season')
 ax.set_xlabel('Season')
 ax.set_ylabel('Number of Sharing Bike')
